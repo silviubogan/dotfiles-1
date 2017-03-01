@@ -5,6 +5,10 @@
 "   select .vimrc from this repo, Ctrl + X, then S to have a symlink to it
 "   You will update only the file in repo, restart vim and the news settings
 "   will be available.
+"
+" TODO:
+" - column 80 better color
+" - tabs vs spaces
 " =============================================================================
 
 
@@ -22,7 +26,11 @@ endif
 " /usr/share/vim/vim74/colors$ ls
 " blue.vim      default.vim  desert.vim   evening.vim   koehler.vim
 " murphy.vim  peachpuff.vim  ron.vim    slate.vim  zellner.vim
-" darkblue.vim  delek.vim    elflord.vim  industry.vim  morning.vim 
+" darkblue.vim  delek.vim    elflord.vim  industry.vim  morning.vim
 " pablo.vim shine.vim  torte.vim
 colorscheme default
 syntax on
+
+" Show wrong extra spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
