@@ -17,3 +17,12 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" Colors schemes
+" /usr/share/vim/vim74/colors$ ls
+" blue.vim      default.vim  desert.vim   evening.vim   koehler.vim
+" murphy.vim  peachpuff.vim  ron.vim    slate.vim  zellner.vim
+" darkblue.vim  delek.vim    elflord.vim  industry.vim  morning.vim 
+" pablo.vim shine.vim  torte.vim
+colorscheme default
+syntax on
