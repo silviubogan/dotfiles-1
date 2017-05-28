@@ -35,6 +35,15 @@ syntax on
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" size of a hard tabstop
+set tabstop=2
+
+" always uses spaces instead of tab characters
+set expandtab
+
+" size of an "indent"
+set shiftwidth=2
+
 " Python ======================================================================
 " PDB
 au FileType python map <silent> <leader>b oimport pdb; pdb.set_trace()<esc>
