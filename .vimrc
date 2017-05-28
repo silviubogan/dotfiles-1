@@ -35,14 +35,17 @@ syntax on
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-" size of a hard tabstop
+" by default, the indent is 2 spaces.
+set shiftwidth=2
+set softtabstop=2
 set tabstop=2
-
-" always uses spaces instead of tab characters
 set expandtab
 
-" size of an "indent"
-set shiftwidth=2
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
+" for python, 4 spaces
+autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 
 " Python ======================================================================
 " PDB
