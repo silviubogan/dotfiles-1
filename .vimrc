@@ -11,6 +11,18 @@
 " - tabs vs spaces
 " =============================================================================
 
+" NeoBundle ===================================================================
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle'))
+
+NeoBundle "sheerun/vim-polyglot"
+
+call neobundle#end()
+NeoBundleCheck
+" End NeoBundle Scripts-------------------------
 
 " Display line numbers on the left
 set number
