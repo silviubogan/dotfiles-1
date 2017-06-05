@@ -21,6 +21,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "sheerun/vim-polyglot"
 
+NeoBundle 'scrooloose/nerdtree'
+map <C-n> :NERDTreeToggle<CR>
+
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
