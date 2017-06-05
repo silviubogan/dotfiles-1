@@ -21,6 +21,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "sheerun/vim-polyglot"
 
+NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 " Plugin key-mappings.
