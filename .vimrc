@@ -24,6 +24,7 @@ NeoBundle "sheerun/vim-polyglot"
 NeoBundle 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 
+NeoBundle 'Vimjas/vim-python-pep8-indent'
 NeoBundle "mattn/emmet-vim.git"
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/neosnippet.vim'
