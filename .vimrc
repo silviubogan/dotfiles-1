@@ -18,7 +18,35 @@ if has('vim_starting')
 endif
 call neobundle#begin(expand('~/.vim/bundle'))
 
+NeoBundle "MarcWeber/vim-addon-mw-utils"
 NeoBundle "sheerun/vim-polyglot"
+
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+NeoBundle "Shougo/neocomplcache.vim"
+
+let g:neocomplcache_enable_at_startup = 1
+
+NeoBundle "garbas/vim-snipmate"
+NeoBundle "honza/vim-snippets"
 
 call neobundle#end()
 NeoBundleCheck
